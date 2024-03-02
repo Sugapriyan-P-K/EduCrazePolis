@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Baseplate</title>
+        <link
+            rel="stylesheet"
+            href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}"
+        />
+        <link
+            rel="stylesheet"
+            href="{% static 'node_modules/fullpage.js/dist/fullpage.css' %}"
+        />
+        <link rel="stylesheet" href="{% static 'baseStyle.css' %}" />
+
+        {% block css %} {% endblock %}
+    </head>
+    <body>
+        <!--Header Section-->
+        <header>
+            <nav
+                class="navbar fixed-top navbar-expand-lg navbar-light custom-bg-light"
+            >
+                <div class="container">
+                    <a href="#" class="navbar-brand brand-name"
+                        >Educrazepolis</a
+                    >
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#myNav"
+                        aria-controls="myNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="myNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a
+                                    href="{% url 'home' %}"
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    >Home</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{% url 'about' %}" class="nav-link"
+                                    >About</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    href="{% url 'contributors' %}"
+                                    class="nav-link"
+                                    >Contributors</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- content starts here -->
+        {% block homeContent %} {% endblock %}
+        <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'node_modules/fullpage.js/dist/fullpage.js' %}"></script>
+        <script type="text/javascript">
+            var myFullpage = new fullpage("#fullpage", {
+                sectionsColor: [
+                    "#f2f2f2",
+                    "#4BBFC3",
+                    "#7BAABE",
+                    "whitesmoke",
+                    "#ccddff",
+                ],
+                navigation: true,
+            });
+        </script>
+        {% block script %} {% endblock %}
+    </body>
+</html>

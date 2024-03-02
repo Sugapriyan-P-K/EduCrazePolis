@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    align-items: center;
+}
+
+section {
+    margin: 0;
+}
+
+.heading {
+    border-top: 2px dashed rgb(91, 89, 89);
+    border-bottom: 2px dashed rgb(91, 89, 89);
+    text-align: center;
+    justify-content: center;
+}
+
+.container1 {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.bg-custom {
+    background-color: #f3f6f8;
+    margin-bottom: 1%;
+}
+
+ul,
+ol {
+    padding: 0%;
+    list-style: none;
+}

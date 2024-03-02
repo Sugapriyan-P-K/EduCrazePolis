@@ -1,0 +1,107 @@
+{% extends "base.html" %} {% load static %} {% block homeContent %}
+<!--parallax begins-->
+<div id="fullpage">
+    <div class="section custom-bg-light" id="section0">
+        <div class="container px-5">
+            <div class="row mb-3">
+                <div class="col-sm-8">
+                    <h1 class="display-3 colored-underline">
+                        Welcome to Educrazepolis
+                    </h1>
+                    <p class="paragraphs">
+                        Unleash the power of EduCrazePolis! Witness the
+                        step-by-step workflows. Experience interactive
+                        demonstrations with input customization and observe
+                        algorithms in action. Gain a deeper understanding of
+                        their inner workings and unravel the magic behind
+                        efficient computations.
+                    </p>
+                    <!-- <p>ref</p> -->
+                </div>
+            </div>
+            <button class="btn btn-lg btn-outline-primary btn-start">
+                Get Started
+            </button>
+        </div>
+    </div>
+
+    <div class="section custom-bg-light" id="section1">
+        <div class="container px-5">
+            <div class="row mb-3">
+                <div class="col-sm-8">
+                    <h1 class="display-3 colored-underline">
+                        Hardware & Networking
+                    </h1>
+                    <p class="paragraphs">
+                        In the dance of interconnected wonders,hardware and
+                        networking unite like stars in a cosmic ballet.
+                        Motherboards whisper to processors. Routers stand as
+                        gatekeepers. Servers, the unsung heroes, orchestrate the
+                        grand performance of online realms. Together, hardware
+                        and networking compose a dazzling ode to the
+                        technological sublime.
+                    </p>
+                </div>
+            </div>
+            <a href="{% url 'hardwares' %}">
+                <button class="btn btn-lg btn-outline-primary">
+                    Get Started
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="section custom-bg-light" id="section2">
+        <div class="container px-5">
+            <div class="row mb-3">
+                <div class="col-sm-8">
+                    <h1 class="display-3 colored-underline">
+                        Softwares, DS & Algorithms
+                    </h1>
+                    <p class="paragraphs">
+                        In the realm of bits and logic. software resigns as the
+                        maestro, conducting a harmonious symphony of code. Data
+                        structures, like architectural blueprints. Algorithms
+                        the poets of computation, dance through the virtual
+                        stage. Software, the wizard behind the screen, breathes
+                        life into machines.
+                    </p>
+                </div>
+            </div>
+            <a href="{% url 'softwares' %}">
+                <button class="btn btn-lg btn-outline-primary">
+                    Get Started
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="section custom-bg-light" id="section2">
+        <div class="container px-5">
+            <div class="row mb-3">
+                <div class="col-sm-8">
+                    <h1 class="display-3 colored-underline">
+                        The PathWays (Roadmaps)
+                    </h1>
+                    <p class="paragraphs">
+                        Navigating career landscapes resembles a kaleidoscope of
+                        possibilities, where each turn unveils a new facet of
+                        professional potential. Internships and entry-level
+                        positions serve as stepping stone. The roadmap twists
+                        and truns, reflecting adaptability and continuous
+                        learning. Finally, the pinnacle is reached - a
+                        culmination of experience and expertise, marking the
+                        summit of a fulfilling career ascent.
+                    </p>
+                </div>
+            </div>
+            <a href="{% url 'roadmaps' %}">
+                <button class="btn btn-lg btn-outline-primary">
+                    Get Started
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--parallax ends-->
+{% endblock %}

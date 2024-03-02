@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+Mono:wght@200;300;400;600&display=swap");
+/*
+font-family: 'Noto Sans Mono', monospace;
+font-family: 'Abril Fatface', cursive !important;
+#f3f6f8
+#d3daf8
+#080a32
+#2a08a5
+#54455e
+#dae7dd
+*/
+.test {
+    color: #2a08a5;
+    color: #080a32;
+    color: #54455e;
+    color: #dae7dd;
+    color: #2a08a5;
+    color: #2a08a5;
+}
+nav {
+    border-bottom: 1px solid #d3daf8;
+}
+
+.custom-bg-light {
+    background-color: #f3f6f8 !important;
+}
+.brand-name {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: 600;
+    font-size: 2em;
+    padding-right: 15px;
+    border-right: 1px solid #d3daf8;
+    color: #080a32 !important;
+}
+.nav-link {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: 400 !important;
+    color: #080a32 !important;
+}
+.paragraphs {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: lighter !important;
+    font-size: 1em;
+    color: #080a32 !important;
+}
+.display-3 {
+    font-family: "Noto Sans Mono", monospace !important;
+}
+
+.slide1-button {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-size: 1.5em;
+    padding: 5px;
+}
+.btn-outline-primary {
+    border-color: #080a32 !important;
+    color: #080a32 !important;
+}
+.btn-outline-primary:hover {
+    background-color: #080a32 !important;
+    color: #dae7dd !important;
+}
+
+.content-container {
+    min-height: 100%;
+}
+
+.fp-controlArrow.fp-prev {
+    color: red !important; /* Set the color of the previous arrow to red */
+}
+
+.fp-controlArrow.fp-next {
+    color: blue; /* Set the color of the next arrow to blue */
+}
+
+.colored-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.colored-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Adjust the distance of the underline from the text */
+    width: 100%;
+    border-bottom: 4px solid #2a08a5;
+    /* Set the color of the underline here */
+}
+
+.selected-nav {
+    position: relative;
+    display: inline-block;
+}
+.selected-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Adjust the distance of the underline from the text */
+    width: 100%;
+    border-bottom: 4px solid #2a08a5;
+}
+
+.card-title {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: 400;
+}
+.card-text {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: 200;
+    font-size: 1em;
+}
+.cust-font {
+    font-family: "Noto Sans Mono", monospace !important;
+}
+
+.btn {
+    font-family: "Noto Sans Mono", monospace !important;
+}
