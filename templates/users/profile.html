@@ -1,0 +1,49 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block user_base_head %} <link rel="stylesheet" href="{% static 'profile.css' %}"> {% endblock user_base_head %}
+{% block user_base_content %}
+
+<div class="profile-card">
+    <div class="user-img">
+        <img src="{{ user.profile.avatar.url }} " style="cursor: pointer;border-radius:80px;"/>
+    </div>
+    {% if user_form.errors %}
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <div id="form_errors">
+            {% for key, value in user_form.errors.items %}
+                <strong>{{ value }}</strong>
+            {% endfor %}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endif %}
+    <div class="infos">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="name">
+                <label>Username:</label>
+                {{ user_form.username }}
+                <br>
+                <label>Email:</label>
+                {{ user_form.email }}
+            </div>
+            <br>
+            <a href="{% url 'password_change' %}">Change Password</a><br>
+                <hr>
+                <br>
+                <label>Change Avatar:</label>
+                {{ profile_form.avatar }}
+            <p class="text">
+                <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
+            </p>
+            <br>
+            <div class="links-button">
+                <button type="submit">Save Changes</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock user_base_content %}

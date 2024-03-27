@@ -4,34 +4,16 @@ const scriptELement =
     document.currentScript ||
     document.querySelector('script[src*="getData.js"]');
 const fetchFile = scriptELement.dataset.value;
-const row = document.querySelector(".row");
+const card = document.getElementById("card-content");
 
 const renderCards = function (data) {
     data.forEach((elem) => {
-        const html = `<div class="col-12 col-md-4 my-5">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">
-                    ${elem.title}
-                    <span class="badge bg-primary">new</span>
-                </h4>
-                <p class="card-text">
-                    ${elem.description}
-                </p>
-                <div class="d-grid">
-                    <a href="${elem.linker}/page/1/" class="btn btn-dark btn-block mt-4"
-                        >New Game</a
-                    >
-                </div>
-            </div>
-            <div class="card-footer">
-                <p class="text-muted card-text">
-                    Updated on: June 6, 2023
-                </p>
-            </div>
-        </div>
-    </div>`;
-        row.innerHTML += html;
+        const html = `<div class="card">
+                            <h2>${elem.title}</h2>
+                        <p>${elem.description}</p>
+                        <a href="${elem.linker}/page/1/">New Game <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>`;
+        card.innerHTML += html;
     });
 };
 

@@ -1,0 +1,117 @@
+.flexcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+    align-items: baseline;
+    height: 400px;
+    border-radius: 20px;
+    margin: 5%;
+  }
+  
+  .flexcardNumber {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 10px 0px;
+    border-radius: 0px 50px 50px 0px;
+    /* font-family: 'Jost', sans-serif; */
+    color: white;
+    text-shadow: 0px 3px 5px black;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .flexcardTitle {
+    /* font-family: 'Jost', sans-serif; */
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  
+  .flexcardText {
+    /* font-family: 'Jost', sans-serif; */
+    padding: 5px;
+    text-align: center;
+    font-weight: 300;
+  }
+  
+  .flexcardNumber:before {
+    content: '';
+    width: 34px;
+    height: 90px;
+    position: absolute;
+    left: -33px;
+    top: 0px;
+    border-radius: 50px 0px 0px 50px;
+    z-index: -1;
+  /* background: #95B7A2; *//* background: -webkit-linear-gradient(bottom, #95B7A2, #AED2BC); */
+    background: -moz-linear-gradient(bottom, #ff8533, #ffdac2);
+  /* background: linear-gradient(to top, #95B7A2, #AED2BC); */;
+  }
+  
+  .flexcardNumber:after {
+    content: '';
+    width: 25px;
+    height: 40px;
+    position: absolute;
+    left: -25px;
+    bottom: -40px;
+    border-radius: 50px 0px 0px 50px;
+    z-index: -1;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .flexcardBlue {
+    background: #f7ffff;
+   box-shadow: 4px 8px 1px #ff9d5c;
+  }
+
+  .urls {
+    padding: 5px;
+  }
+  
+  .flexcardNumberBlue {
+    background: #FDFFFE;
+    background: -webkit-linear-gradient(right, #fff3eb, #ff9d5c);
+    background: -moz-linear-gradient(right, #fff3eb, #ff9d5c);
+    background: linear-gradient(to left, #fff3eb, #ff9d5c);
+    box-shadow: 0px 2px 2px #ffb685;
+  }
+  
+  .flexcardNumberBlue:before {
+    background: #ff9d5c;
+  }
+  
+  .flexcardNumberBlue:after {
+    background: #ff9d5c;
+  }
+
+  
+@media only screen and (max-width: 800px) {
+
+    .flexcard {
+      width: 35%;
+      margin-top: 20px;
+    }
+  
+  
+  }
+  
+  @media only screen and (max-width: 500px) {
+  
+    .flexcard {
+      width: 70%;
+    }
+  
+  
+  }

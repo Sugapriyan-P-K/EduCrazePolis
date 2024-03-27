@@ -1,0 +1,113 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block homeHeadContent %}
+<link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+<!-- Choices.js [Custom select]-->
+<link rel="stylesheet" href="{% static 'vendor/choices.js/public/assets/styles/choices.css' %}">
+<!-- Theme stylesheet-->
+<link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<style>
+    .bg-primary {
+        background-color: #a95ac4 !important;
+    }
+    .lined::after {
+        background: #a95ac4;
+    }
+    .primary-overlay::after {
+        background: #a95ac4;
+    }
+</style>
+{% endblock homeHeadContent%}
+
+{% block homeContent %}
+<section class="py-5">
+    <div class="container py-4">
+      <header class="mb-5">
+        <h2 class="text-uppercase lined mb-4">Community Events </h2>
+        <p class="lead">Yielding, they're air. Land replenish spirit given gathered subdue, day Blessed you'll great created, lights a one light, blessed deep morning, appear our. Fruit multiply, creeping first image. Upon saw isn't male winged to replenish tree and.</p>
+      </header>
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <!-- Portfolio item-->
+          <div class="box-image-text text-center primary-overlay"><img class="img-fluid" src="{% static 'img/community.png' %}" alt="...">
+            <div class="overlay-content d-flex flex-column justify-content-center p-4">
+              <h3 class="text-uppercase box-image-text-heading">Community</h3>
+              <p class="text-white box-image-text-description">EveryOne is welcome</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <!-- Portfolio item-->
+          <div class="box-image-text text-center primary-overlay"><img class="img-fluid" src="{% static 'img/leading-mentors.png' %}" alt="...">
+            <div class="overlay-content d-flex flex-column justify-content-center p-4">
+              <h3 class="text-uppercase box-image-text-heading">Mentors</h3>
+              <p class="text-white box-image-text-description">Leading mentors sessions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <!-- Portfolio item-->
+          <div class="box-image-text text-center primary-overlay"><img class="img-fluid" src="{% static 'img/networking-session.png' %}" alt="...">
+            <div class="overlay-content d-flex flex-column justify-content-center p-4">
+              <h3 class="text-uppercase box-image-text-heading">Networking</h3>
+              <p class="text-white box-image-text-description">Live networking session with mentors</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <!-- Portfolio item-->
+          <div class="box-image-text text-center primary-overlay"><img class="img-fluid" width="368px" height="230px" src="{% static 'img/live-event-coaching.png' %}" alt="...">
+            <div class="overlay-content d-flex flex-column justify-content-center p-4">
+              <h3 class="text-uppercase box-image-text-heading">Live Events</h3>
+              <p class="text-white box-image-text-description">Events where anyone can network with more peers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bg-primary py-5 text-white">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-8 p-3">
+          <h3 class="text-uppercase mb-0">Do you want join our community?</h3>
+        </div>
+        <div class="col-lg-4 p-3">   <a class="btn btn-outline-light" href="https://discord.gg/7gRH487j">Join now</a></div>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/waypoints/lib/noframework.waypoints.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+{% endblock homeContent %}

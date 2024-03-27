@@ -1,0 +1,18 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}Logout{% endblock title %}
+{% block user_base_head %} <link rel="stylesheet" href="{% static 'logout.css' %}"> {% endblock user_base_head %}
+{% block user_base_content %}
+
+
+<div class="flexcard flexcardBlue">
+            <div class="flexcardNumber flexcardNumberBlue">Thank You</div>
+            <div class="flex flexcardTitle">You have been logged out</div>
+            <div class="flex flexcardText">Thanks for your time, contact me for any comments or suggestions.</div>      
+            <br>
+            <hr>
+            <a class="urls" href="{% url 'login' %}">Sign in again</a>
+</div>
+
+
+{% endblock user_base_content %}

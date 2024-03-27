@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block homeHeadContent %} 
+<link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'vendor/choices.js/public/assets/styles/choices.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% enblock %}
+{% block toExclude %}
+{% endblock %}
+
+{% block homeContent %}
+        {% for mentor in mentors %}
+        <div class="py-5 mb-5 border-top border-bottom">
+            <div class="row gy-4 gx-xl-5 mb-5">
+              <div class="col-sm-3 col-md-2 text-center text-sm-start"><img class="avatar avatar-xl p-1" src="{{ mentor.profile.avatar.url }}" alt="{{ mentor.firstname }}"></div>
+              <div class="col-sm-9 col-md-10">
+                <h5 class="text-uppercase mb-3">{{ mentor.firstname }} {{ mentor.lastname }}</h5>
+                <p class="text-sm mb-3">{{ mentor.bio }}</p><a class="text-sm" href="#"><i class="fas fa-reply me-2"></i>Reply</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+{% endblock homeContent %}

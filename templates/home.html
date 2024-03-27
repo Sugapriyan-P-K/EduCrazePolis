@@ -1,107 +1,126 @@
 {% extends "base.html" %} {% load static %} {% block homeContent %}
-<!--parallax begins-->
-<div id="fullpage">
-    <div class="section custom-bg-light" id="section0">
-        <div class="container px-5">
-            <div class="row mb-3">
-                <div class="col-sm-8">
-                    <h1 class="display-3 colored-underline">
-                        Welcome to Educrazepolis
-                    </h1>
-                    <p class="paragraphs">
-                        Unleash the power of EduCrazePolis! Witness the
-                        step-by-step workflows. Experience interactive
-                        demonstrations with input customization and observe
-                        algorithms in action. Gain a deeper understanding of
-                        their inner workings and unravel the magic behind
-                        efficient computations.
-                    </p>
-                    <!-- <p>ref</p> -->
-                </div>
-            </div>
-            <button class="btn btn-lg btn-outline-primary btn-start">
-                Get Started
-            </button>
-        </div>
-    </div>
 
-    <div class="section custom-bg-light" id="section1">
-        <div class="container px-5">
-            <div class="row mb-3">
-                <div class="col-sm-8">
-                    <h1 class="display-3 colored-underline">
-                        Hardware & Networking
-                    </h1>
-                    <p class="paragraphs">
-                        In the dance of interconnected wonders,hardware and
-                        networking unite like stars in a cosmic ballet.
-                        Motherboards whisper to processors. Routers stand as
-                        gatekeepers. Servers, the unsung heroes, orchestrate the
-                        grand performance of online realms. Together, hardware
-                        and networking compose a dazzling ode to the
-                        technological sublime.
-                    </p>
-                </div>
-            </div>
-            <a href="{% url 'hardwares' %}">
-                <button class="btn btn-lg btn-outline-primary">
-                    Get Started
-                </button>
-            </a>
+<section id="hero-section">
+    <div class="wrapper">
+        <div class="content">
+            <h1>Wanna Chase your Goals?</h1>
+            <p>More than 25+ learning modules - Numerous Online Mentors - Hand-on Lab sessions - Dive deep and explore endlessly</p>
+            <li><a href="#catalogue">Try now <span class="material-symbols-outlined">arrow_forward</span></a></li>
         </div>
-    </div>
 
-    <div class="section custom-bg-light" id="section2">
-        <div class="container px-5">
-            <div class="row mb-3">
-                <div class="col-sm-8">
-                    <h1 class="display-3 colored-underline">
-                        Softwares, DS & Algorithms
-                    </h1>
-                    <p class="paragraphs">
-                        In the realm of bits and logic. software resigns as the
-                        maestro, conducting a harmonious symphony of code. Data
-                        structures, like architectural blueprints. Algorithms
-                        the poets of computation, dance through the virtual
-                        stage. Software, the wizard behind the screen, breathes
-                        life into machines.
-                    </p>
-                </div>
-            </div>
-            <a href="{% url 'softwares' %}">
-                <button class="btn btn-lg btn-outline-primary">
-                    Get Started
-                </button>
-            </a>
+        <div class="image">
+            <img src="{% static 'img/homePage/hero-section.png' %}"/>
         </div>
     </div>
-    <div class="section custom-bg-light" id="section2">
-        <div class="container px-5">
-            <div class="row mb-3">
-                <div class="col-sm-8">
-                    <h1 class="display-3 colored-underline">
-                        The PathWays (Roadmaps)
-                    </h1>
-                    <p class="paragraphs">
-                        Navigating career landscapes resembles a kaleidoscope of
-                        possibilities, where each turn unveils a new facet of
-                        professional potential. Internships and entry-level
-                        positions serve as stepping stone. The roadmap twists
-                        and truns, reflecting adaptability and continuous
-                        learning. Finally, the pinnacle is reached - a
-                        culmination of experience and expertise, marking the
-                        summit of a fulfilling career ascent.
-                    </p>
-                </div>
-            </div>
-            <a href="{% url 'roadmaps' %}">
-                <button class="btn btn-lg btn-outline-primary">
-                    Get Started
-                </button>
-            </a>
-        </div>
-    </div>
-</div>
+</section>
 
-<!--parallax ends-->
+<section id="milestones">
+    <div class="achievements">
+        <span>05+</span>
+        <p>Topics Available</p>
+    </div>
+    <div class="achievements">
+        <span>25+</span>
+        <p>Modules Provided</p>
+    </div>
+    <div class="achievements">
+        <span>50+</span>
+        <p>Hand-on sessions</p>
+    </div>
+    <div class="achievements">
+        <span>1K+</span>
+        <p>Resources online</p>
+    </div>    
+</section>
+
+<section id="highlights">
+    <div class="wrapper">
+        <div class="text-content">
+            <h2>Why Choose Us?</h2>
+            <p>"Educrazepolis is specifically crafted for a transformative learning journey. Our courses blend theoretical knowledge with practical skills through hands-on lab sessions guided by expert mentors. Engage with our supportive community for collaboration and advice, fostering an environment where learning flourishes and success becomes attainable for all. With flexible scheduling and access to resources, take control of your educational journey and join us in reshaping the future of learning."</p>
+        </div>
+        <div class="img-content">
+            <img src="{% static 'img/homePage/technology.jpg' %}" alt=""/>
+        </div>
+    </div>
+</section>
+
+<section id="catalogue">
+    <h2>Featured Topics</h2>
+    <p id="show-all-btn">View all Topics <span id="expand_icon" class="material-symbols-outlined">expand_more</span></p>
+    <div class="showcase">
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'img/homePage/netword.jpg' %}" alt="">
+                <h3>Hardware and Networking</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore nihil porro dicta doloribus mollitia!</p>
+            <a href="{% url 'hardwares' %}">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'img/homePage/DSA.jpg' %}" alt="">
+                <h3>Data Structures and Algorithms</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore nihil porro dicta doloribus mollitia!</p>
+            <a href="{% url 'softwares' %}">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'img/homePage/roadmap.jpg' %}" alt="">
+                <h3>Roadmaps</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore nihil porro dicta doloribus mollitia!</p>
+            <a href="{% url 'roadmaps' %}">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'img/homePage/roadmap.jpg' %}" alt="">
+                <h3>Dummy-1</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore nihil porro dicta doloribus mollitia!</p>
+            <a href="" id="disabled">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="{% static 'img/homePage/roadmap.jpg' %}" alt="">
+                <h3>Dummy-2</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore nihil porro dicta doloribus mollitia!</p>
+            <a href="" id="disabled">Learn more <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h3>What our students say :)</h3>
+    <div class="container">
+        <div class="wrapper">
+            <div class="image">
+                <img src="{% static 'img/homePage/testimonial1.jpg' %}" alt="">
+            </div>
+            <div class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonial-text">A thorough course that enables the student to learn at their own pace, have access to their instructor when needed, and have tools that they can continue their education and build upon what they have learned. You receive more than just a piece of the puzzle and wonder how to incorporate it into your work, you receive the skills to start a project at inception and see it to completion! Great Course!</p>
+                <p class="author">Adam Wingard</p>
+                <p class="address">Los Angeles, CA</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="image">
+                <img src="{% static 'img/homePage/testimonial.jpg' %}" alt="">
+            </div>
+            <div class="testimonial">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="testimonial-text">Well designed, gives a great and useful opening to user-centered design. Thank you very much. It was a great experience for me.</p>
+                <p class="author">Josh Whedon</p>
+                <p class="address">New York, NA</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
 {% endblock %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Educrazepolis</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/a9cc2d403e.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <section class="bg-pentagon py-4">
+        <div class="container py-3">
+          <div class="row d-flex align-items-center gy-4">
+            <div class="col-md-7">
+              <h1 class="h2 mb-0 text-uppercase">basics of Compiler</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <figure class="p-4 bg-light border-start border-4 border-primary">
+        <blockquote class="blockquote">
+            Reading is essential for those who seek to rise above the ordinary.
+        </blockquote>
+        <figcaption class="blockquote-footer mb-0">Jim Rohn 
+          <cite title="Source Title">Weareteachers</cite>
+        </figcaption>
+      </figure>
+      <section class="py-5">
+        <div class="container py-4">
+          <div class="row gy-5">
+            <div class="col-lg-9">
+                <p class="lead mb-5">A compiler is software that translates the code written in one programming language to another. Ex, g++ from GNU family of compilers, PowerBASIC, etc.
+                    The purpose of a compiler is to enable its user to write programs in a certain language that is user-friendly and convenient. The compiler then converts the program into another program of a language that is more close to the machine and more efficient. In compilation, there are many phases of the compiler.</p>
+                <!-- for img -->
+                <p class="m-0 py-4"><img class="img-fluid" src="img/blog2.jpg" alt="Example blog post alt"></p>
+                <h2>Phases of compiler</h2>
+                <h3>1. Lexical Analysis</h3>
+                <p>In the first phase in the compiler, lexical analysis receives as input the source code of the program. Lexical analysis is also referred to as linear analysis or scanning. It's the process of tokenizing.
+                    Lexer scans the input source code, one character at a time. The instant it identifies the end of a lexeme, it transforms the lexeme into a token. The input is transformed in this manner into a sequence of tokens. A token is a meaningful group of characters from the source which the compiler recognizes. The lexical analyzer then passes these tokens to the next phase in the compiler. Scanning only eliminates the non-token structures from the input stream, such as comments, unnecessary white spaces, etc. The program that implements lexical analysis is known as a lexer, lexical analyzer, or scanner.
+                </p>
+                <h3>2. Syntax Analysis</h3>
+                <p>Syntax analysis, the second phase in the compiler, receives as input the stream of tokens, corresponding to which it produces a parse tree as output. Syntax analysis is also referred to as parsing. The parse tree is generated with the help of pre-determined grammar rules of the language that the compiler targets.
+                    The syntax analyzer checks whether or not a given program follows the rules of context-free grammar. If it does, then the syntax analyzer creates the parse tree for the input source program.
+                    The phase of syntax analysis is also known as hierarchical analysis, or parsing. The program that is responsible for performing syntax analysis is referred to as a parser. During parsing, the parser determines the syntactic validity of the source program.
+                </p>
+                <h3>3. Semantic Analysis</h3>
+                <p>In the third phase in the process of compilation, semantic analysis checks if the parse tree that it receives as input, abides by the rules of the language which the compiler targets. The semantic analyzer also records all the identifiers, their types, expressions, etc. The semantic analysis phase generates as output the annotated tree syntax.
+                    The semantics of a language make its constructs such as tokens and syntax structures meaningful. Semantics enables interpreting symbols, their types, and the relations among them. Semantic analysis determines if the syntax structure of the source code has any meaning or not.
+                    There are certain rules set by the grammar of the target language that is evaluated during semantic analysis. Semantic analysis performs scope resolution, type checking, array-bound checking.
+                </p>
+                <h3>4. Intermediate Code Generation</h3>
+                <p>Intermediate code generation is the fourth phase in the process of compilation, during which the input source code is transformed into an intermediate form. This generated intermediate code lies in the range between the high-level language (in which the original initial input source program was written) and the low-level machine language such as assembly. The intermediate code is generated in a manner such that it becomes quite easy for a user to translate it into the target machine code. It can be represented using various notations techniques such as postfix notation, directed acyclic graph, syntax tree, three-address codes, quadruples, triples, etc. Intermediate code does not need a full compilation every time it needs to be run on different machines.
+
+                </p>
+                <h3>5. Code Optimization</h3>
+                <p>This phase alters the intermediate code it receives as input such that the program output becomes relatively more efficient in terms of both runtime and memory consumption. These changes include, but are not limited to, removing unnecessary parts of code, appropriately arranging the lines of code.
+                    Code optimization may or may not be dependent on the machine. In machine-independent optimization, the compiler takes in the intermediate code and changes a part of the intermediate code such that there is no involvement of any CPU registers and absolute memory locations.
+                    Machine-dependent optimization is done after the target code has been generated. The code is changed as per the architecture of the target machine. This optimization involves CPU registers and absolute memory references.</p>
+                <h3>6. Code Generation</h3>
+                <p>In the sixth and the final phase of the compiler, code generation receives as input the optimized intermediate code and translates the optimized intermediate code into the target machine language. This phase involves assembly language usage to convert optimized code into target machine format. Target code could be either machine code or assembly code. Each line in optimized code is mapped to several lines in machine/assembly code.
+                </p>
+                <h2>Error Handling Routine</h2>
+                <p>Error Handling routine detects errors, reports them to the user, and follows some recovery plan to handle the errors. Errors are denoted by blanks in the symbol table. An error could be either of the following two kinds</p>
+                <h3>1. Runtime</h3>
+                <p>These errors occur during the program execution. The common reasons behind them occurring are incorrect system parameters, invalid input data, lack of enough memory to run the program, a memory conflict with another program, logical errors such as division by zero, etc.</p>
+                <h3>2. Compile time</h3>
+                <p>These errors arise during the program compilation. Common reasons are syntactic invalidity, missing file references, etc.
+
+                    Following are the four ways of recovering from an error:</p>
+                <h4>1. Panic Mode Recovery:</h4>
+                <p>Panic mode recovery is the simplest method and prevents the parser from developing infinite loops during the recovery process. The parser rejects the input symbol one by one until one of the designated sets of synchronizing tokens such as semicolons, etc is found. This would be sufficient if it's unlikely that multiple errors will be present within any one statement.</p>
+                <h4>2.  Phase Level Recovery:</h4>
+                <p>In the phase level recovery method, when the parser hits an error, it makes necessary changes to the remaining input so that the parser can continue parsing. The error can be resolved by removing extra semicolons, replacing commas with semicolons, reintroducing missing semicolons, etc. When any prefix is detected in the remaining input, the prefix is replaced with some suitable string which could ensure that parsing can be continued further.</p>
+                <h4>3. Error Productions:</h4>
+                <p>This method can be deployed if the user is aware of common grammar-related mistakes that are found along with errors that generate erroneous constructs. When this method is incorporated, it's possible to generate error messages during parsing, and the parsing can be continued.</p>
+                <h4>4. Global correction:</h4>
+                <p>To recover from error-causing inputs, the parser analyzes the entire program and attempts to find the closest error-free match for it. This match is required not to be performing several insertions, deletions, and changes of tokens. This method is not found to be practical because of its high time and space complexity.</p>
+                <h2>Symbol Table</h2>
+                <p>It's a data structure that the compiler generates and maintains to keep track of the semantics of variables. It stores many types of information such as information about the scope and binding information of names, about instances of entities such as variables, function names, classes, etc.
+
+                    The symbol table is created during syntax analysis and linear analyses and is utilized by the compiler to achieve increased efficiency during compile time. Every symbol table entry is associated with attributes that assist the compiler during several phases of the compiler.
+                    The items stored in symbol table are - variable names, constants, procedure,function literal constants, strings, compiler generated temporaries, and labels in source languages.
+                    
+                    </p>
+                <h2>Symbol Table Management</h2>
+                <p>When an identifier is found, it's entered into the symbol table. The information stored consists of name, location, form, size, scope, etc. Symbol table entries are stored in records. A record is a certain number of consecutive memory locations. Following are the various implementations of the symbol table, depending on the data structure used:</p>
+                <h3>List: </h3>
+                <p>Uses pointers to create a dynamically allocated linked list. A list is easy to implement. Operations such as retrieving information, inserting entries, are efficient. Instead of a linked list, an array can also be used.</p>
+                <h3>Binary Search Tree:</h3>
+                <p>Stores the entries in an ordered fashion. Searching is efficient. Uses pointers to create a binary tree, in the nodes of which entries are stored.</p>
+                <h3>Hash Table</h3>
+                <p>The position of an entry is calculated by using the concept of hashing. By some pre-determined suitable formula, a hash value is computed for the entry. Then this calculated hash value is used as a position for storing the entry. Insertion, deletion, searching are all very easy and fast. But requires a large amount of memory.</p>
+                <h2>Application of Compiler</h2>
+                <ul>
+                    <li><p>Compiler technology is required in implementing high-level programming languages to transform them into a low-level language that can be understood by the machine.</p></li>
+                    <li><p>Optimizing compilers help in optimizing the overall performance of the program and thus discards the inefficiency of high-level abstractions</p></li>
+                    <li><p>Compiler technology is also useful in designing computer architectures. Earlier, compilers were created after setting up the machines. Lately, compilers have started to be built in the processor-design stage of modern computer architecture designs.</p></li>
+                    <li><p>Compiler technology also helps several application threads to run on different processors.</p></li>
+                    <li><p>Compiler technology is also used in many program translations such as binary translation, hardware synthesis, database query interpretation, etc.</p></li>
+                </ul>
+                <button class="btn btn-outline-dark btn-lg" type="button"><a href="{% url 'start' number=2 subcategory=topic %}">next</a></button>
+            </div>
+            </div>
+            </div>
+            </section>
+
+</html>

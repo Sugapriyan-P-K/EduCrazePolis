@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block homeHeadContent %}
+<link
+    rel="stylesheet"
+    href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}"
+/>
+
+<link rel="stylesheet" href="{% static 'baseStyle.css' %}" />
+{%endblock %} {% block homeContent %}
+
+<section id="course-content">
+    <h1>Course Name Here</h1>
+    <div class="wrapper" id="card-content">
+         <!-- <div class="card" >
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias possimus expedita dolore porro earum placeat facilis accusamus, eveniet culpa animi!</p>
+            <a href="#">Start Learning <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>  -->
+    </div>
+</section>
+<script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'js/getData.js' %}" data-value={{ category }}></script>
+{% endblock %}

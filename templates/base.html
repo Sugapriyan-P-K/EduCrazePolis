@@ -2,89 +2,79 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Baseplate</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Educrazepolis</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon.png' %}"> -->
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
         <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             rel="stylesheet"
-            href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}"
         />
         <link
             rel="stylesheet"
-            href="{% static 'node_modules/fullpage.js/dist/fullpage.css' %}"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        {% block toExclude %}
         <link rel="stylesheet" href="{% static 'baseStyle.css' %}" />
-
-        {% block css %} {% endblock %}
+        {% endblock %}
+        {% block homeHeadContent %} {% endblock %}
+        <script
+            src="https://kit.fontawesome.com/a9cc2d403e.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
-        <!--Header Section-->
         <header>
-            <nav
-                class="navbar fixed-top navbar-expand-lg navbar-light custom-bg-light"
-            >
-                <div class="container">
-                    <a href="#" class="navbar-brand brand-name"
-                        >Educrazepolis</a
+            <nav>
+                <h1><img src="{% static 'favicon-32x32.png' %}">Educrazepolis</h1>
+                <span class="material-symbols-outlined" id="menu-btn">
+                    menu
+                </span>
+                <ul class="menu-links">
+                    <li class="menu-items"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="menu-items"><a href="{% url 'about' %}">About</a></li>
+                    <li class="menu-items"><a href="{% url 'mentors-seek' %}">Seek Mentors</a></li>
+                    <li class="menu-items"><a href="{% url 'community' %}">Community</a></li>
+                    <li class="menu-items" id="register-btn">
+                        <a href="{% url 'users-profile' %}">{{ user_form.username | default:'Register' }}</a>
+                    </li>
+                    <span class="material-symbols-outlined" id="close-menu-btn"
+                        >close</span
                     >
-
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#myNav"
-                        aria-controls="myNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="myNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a
-                                    href="{% url 'home' %}"
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    >Home</a
-                                >
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="{% url 'about' %}" class="nav-link"
-                                    >About</a
-                                >
-                            </li>
-
-                            <li class="nav-item">
-                                <a
-                                    href="{% url 'contributors' %}"
-                                    class="nav-link"
-                                    >Contributors</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </ul>
             </nav>
         </header>
         <!-- content starts here -->
         {% block homeContent %} {% endblock %}
-        <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'node_modules/fullpage.js/dist/fullpage.js' %}"></script>
-        <script type="text/javascript">
-            var myFullpage = new fullpage("#fullpage", {
-                sectionsColor: [
-                    "#f2f2f2",
-                    "#4BBFC3",
-                    "#7BAABE",
-                    "whitesmoke",
-                    "#ccddff",
-                ],
-                navigation: true,
+        {% include 'footer.html' %}
+        <script>
+            let header = document.querySelector("header");
+            let menuBtn = document.querySelector("#menu-btn");
+            let closeBtn = document.querySelector("#close-menu-btn");
+            let showBtn = document.querySelector("#show-all-btn");
+            let showcase = document.querySelector(".showcase");
+            let expandIcon = document.querySelector("#expand_icon");
+            console.log(showcase);
+
+            menuBtn.addEventListener("click", () => {
+                header.classList.toggle("show-mobile-menu");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                menuBtn.click();
+            });
+
+            showBtn.addEventListener("click", () => {
+                expandIcon.textContent =
+                    expandIcon.textContent === "expand_more"
+                        ? "expand_less"
+                        : "expand_more";
+                showcase.classList.toggle("show-all");
             });
         </script>
-        {% block script %} {% endblock %}
     </body>
 </html>

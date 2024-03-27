@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block homeHeadContent %}
+<link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/choices.js/public/assets/styles/choices.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'patch.css' %}">
+<style>
+    .progress-bar {
+        background-color: #c187d4;
+    }
+    .lined::after {
+        background: #d0a5df;
+    }
+    .icon-filled {
+        background: #c187d4;
+    }
+</style>
+{% endblock homeHeadContent %}
+{% block toExclude %}
+{% endblock toExclude %}
+{% block homeContent %}
+<div class="wide" id="all">
+<section class="pb-5">
+    <div class="container pb-4">
+      <div class="row gy-3">
+        <div class="col-lg-4">
+          <h2 class="lined text-uppercase mb-4">Our skills</h2>
+          <div class="progress mb-3" style="height: 20px">
+            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Finance and Marketing</div>
+          </div>
+          <div class="progress mb-3" style="height: 20px">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Content Development</div>
+          </div>
+          <div class="progress mb-3" style="height: 20px">
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Problem Solving and programming</div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <h2 class="lined text-uppercase mb-4">Our values</h2>
+          <ul class="list-unstyled">
+            <li class="d-flex mb-3">
+              <div class="icon-filled me-2"><i class="fas fa-check"></i></div>
+              <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </li>
+            <li class="d-flex mb-3">
+              <div class="icon-filled me-2"><i class="fas fa-check"></i></div>
+              <p class="text-sm mb-0">Aliquam tincidunt mauris eu risus.</p>
+            </li>
+            <li class="d-flex mb-3">
+              <div class="icon-filled me-2"><i class="fas fa-check"></i></div>
+              <p class="text-sm mb-0">Vestibulum auctor dapibus neque.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-pentagon border-top border-bottom border-gray-600">
+      <div class="col pat-1">
+    <div class="container py-4">
+      <!-- Counters-->
+      <div class="row gy-4 text-center" id="counterUp">
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center text-gray-700">
+            <div class="icon-outlined border-gray-600 icon-sm mx-auto mb-3 icon-thin"><i class="fas fa-align-justify"></i></div>
+            <h4 class="h1 counter mb-3" data-counter="51">0</h4>
+            <p class="text-uppercase fw-bold mb-0">Learning Modules</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center text-gray-700">
+            <div class="icon-outlined border-gray-600 icon-sm mx-auto mb-3 icon-thin"><i class="fas fa-users"></i></div>
+            <h4 class="h1 counter mb-3" data-counter="11">0</h4>
+            <p class="text-uppercase fw-bold mb-0">Mentors</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center text-gray-700">
+            <div class="icon-outlined border-gray-600 icon-sm mx-auto mb-3 icon-thin"><i class="far fa-copy"></i></div>
+            <h4 class="h1 counter mb-3" data-counter="21">0</h4>
+            <p class="text-uppercase fw-bold mb-0">Ongoing Projects</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="text-center text-gray-700">
+            <div class="icon-outlined border-gray-600 icon-sm mx-auto mb-3 icon-thin"><i class="fas fa-drafting-compass"></i></div>
+            <h4 class="h1 counter mb-3" data-counter="1000">0</h4>
+            <p class="text-uppercase fw-bold mb-0">Problem Solvings and Blogs</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container py-4">
+      <header class="mb-5">
+        <h2 class="lined text-uppercase">Meet our team</h2>
+      </header>
+      <div class="row gy-4">
+        <!-- Team member  -->
+        <div class="col-lg-3 col-md-6 text-center"><a href="team-member.html"><img class="avatar avatar-xxl p-2 mb-4" src="img/person-1.jpg" alt="Sugapriyan"></a>
+          <h3 class="h4 mb-1 text-uppercase"><a class="text-reset" href="team-member.html">Sugapriyan</a></h3>
+          <p class="text-muted small text-uppercase">Founder</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="social-link facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="social-link twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a class="social-link email" href="#"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <!-- Team member  -->
+        <div class="col-lg-3 col-md-6 text-center"><a href="team-member.html"><img class="avatar avatar-xxl p-2 mb-4" src="img/person-2.jpg" alt="Zubair Ahamed"></a>
+          <h3 class="h4 mb-1 text-uppercase"><a class="text-reset" href="team-member.html">Zubair Ahamed</a></h3>
+          <p class="text-muted small text-uppercase">CTO</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="social-link facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="social-link twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a class="social-link email" href="#"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <!-- Team member  -->
+        <div class="col-lg-3 col-md-6 text-center"><a href="team-member.html"><img class="avatar avatar-xxl p-2 mb-4" src="img/person-3.png" alt="Sheikh Mohammed"></a>
+          <h3 class="h4 mb-1 text-uppercase"><a class="text-reset" href="team-member.html">Sheikh Mohammed</a></h3>
+          <p class="text-muted small text-uppercase">Team Leader</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="social-link facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="social-link twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a class="social-link email" href="#"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <!-- Team member  -->
+        <div class="col-lg-3 col-md-6 text-center"><a href="team-member.html"><img class="avatar avatar-xxl p-2 mb-4" src="img/person-4.jpg" alt="Mathesh"></a>
+          <h3 class="h4 mb-1 text-uppercase"><a class="text-reset" href="team-member.html">Mathesh</a></h3>
+          <p class="text-muted small text-uppercase">Lead UI/UX Developer</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="social-link facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="social-link twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="social-link youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a class="social-link email" href="#"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/lib/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/choices.js/public/assets/scripts/choices.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script>
+        const countELem = document.querySelectorAll(".counter");
+        countELem.forEach((elem) => {
+            const val = elem.dataset.counter;
+            console.log(val);
+            for (let num = 0; num < val; num++) {
+                setTimeout(2000000);
+                elem.innerHTML = String(num);
+            }
+        });
+        countELem[0].innerHTML += "+";
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+{% endblock homeContent %}

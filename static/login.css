@@ -1,0 +1,127 @@
+:root {
+    --color-black-500: #090a0c;
+    --color-black-400: #23262e;
+    --color-black-300: #353a46;
+    --color-black-250: #353a46;
+    --color-black-200: #353a46;
+    --color-black-150: #aeb4c2;
+    --color-black-100: #d0d4dc;
+    --color-black-50: #e8eaee;
+    --color-purple-500: #713187;
+    --color-purple-400: #a95ac4;
+    --color-purple-300: #c187d4;
+    --color-purple-250: #d0a5df;
+    --color-purple-200: #dfc3ea;
+    --color-purple-150: #e7d2ef;
+    --color-purple-100: #efe1f4;
+    --color-primary-500: #ffffff;
+    --color-primary-400: #f4f2f3;
+    --color-primary-300: #e3dee0;
+    --color-orange-500: #ff8533;
+    --color-orange-400: #ff9d5c;
+    --color-orange-300: #ffb685;
+    --color-orange-250: #ffcead;
+    --color-orange-200: #ffdac2;
+    --color-orange-150: #ffe7d6;
+    --color-orange-100: #fff3eb;
+}
+
+#login{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#login > .login-card{
+    width: 50%;
+    height: 100%;
+}
+
+
+.login-card > .wrapper{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#student-login > .wrapper{
+    background-color: var(--color-primary-300);
+    box-shadow: inset -5px 3px 70px 7px rgba(255,255,255, 0.7), 5px 0px 90px 2px rgba(0,0,0,0.2);
+}
+#student-login > .wrapper > form > label input{
+    background-color: var(--color-primary-300);
+}
+.login-card > .wrapper > h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+}
+.login-card > .wrapper > form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.login-card > .wrapper > form > label{
+    margin: auto 18px;
+}
+
+.login-card > .wrapper > form input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 18px auto;
+    padding:0 5px;
+    outline: none;
+    border:2px solid var(--color-purple-400);
+    border-radius: 5px;
+}
+
+.login-card > .wrapper > form button{
+    width:100px;
+    height:35px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-purple-300);
+    color: var(--color-primary-500);
+    z-index: 1;
+}
+.login-card > .wrapper > form a{
+    text-decoration: none;
+    width: 50%;
+    margin: 0px 0px 25px 0px;
+    font-size: 0.8em;
+    color: var(--color-orange-500);
+    font-weight: 500;
+    text-align: end;
+}
+label{
+    width: 50%;
+    position: relative;
+}
+
+i{
+    position: absolute;
+    right: 10px;
+    bottom:38%;
+    transform: translate(0% 50%);
+}
+button:hover{
+    background-color: var(--color-purple-500);
+}
+@media screen and (max-width:900px) {
+    #login{
+        flex-direction: column;
+    }
+    #login > .login-card{
+        width: 100%;
+        min-height: 100vh;
+    }
+}

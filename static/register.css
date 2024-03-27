@@ -1,0 +1,212 @@
+:root {
+    --color-black-500: #090a0c;
+    --color-black-400: #23262e;
+    --color-black-300: #353a46;
+    --color-black-250: #353a46;
+    --color-black-200: #353a46;
+    --color-black-150: #aeb4c2;
+    --color-black-100: #d0d4dc;
+    --color-black-50: #e8eaee;
+    --color-purple-500: #713187;
+    --color-purple-400: #a95ac4;
+    --color-purple-300: #c187d4;
+    --color-purple-250: #d0a5df;
+    --color-purple-200: #dfc3ea;
+    --color-purple-150: #e7d2ef;
+    --color-purple-100: #efe1f4;
+    --color-primary-500: #ffffff;
+    --color-primary-400: #f4f2f3;
+    --color-primary-300: #e3dee0;
+    --color-orange-500: #ff8533;
+    --color-orange-400: #ff9d5c;
+    --color-orange-300: #ffb685;
+    --color-orange-250: #ffcead;
+    --color-orange-200: #ffdac2;
+    --color-orange-150: #ffe7d6;
+    --color-orange-100: #fff3eb;
+}
+
+*{
+    user-select: none;
+}
+body{
+    width:100%;
+    height: 100vh;
+    background-color: var(--color-primary-500);
+}
+#Register{
+    width:100%;
+    height:100%;
+    background-color: var(--color-primary-500);
+}
+#Register > .wrapper{
+    width:90%;
+    height: 100%;
+    background-color: var(--color-primary-500);
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#Register > .wrapper > .reg-option{
+    width:40%;
+    height: 50%;
+    background: var(--color-primary-500);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0 0 16px;
+    gap:20px;
+}
+#Register > .wrapper > .reg-option > .description{
+    font-size:18px;
+    max-width: 80%;
+}
+#Register > .wrapper  p{
+    margin: 0;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.description >  h1 {
+    font-size: 1.8em;
+    font-weight: 900;
+}
+.description > p{
+    font-size: unset;
+}
+
+.reg-option > .option{
+    width:60%;
+    height:20%;
+    border-radius: 8px;
+    padding: 10px;
+    background: var(--color-primary-400);
+    display: flex;
+    justify-content:space-between;
+    gap:16px;
+    cursor: pointer;
+}
+.reg-option > div.selected{
+    background-color:rgba(169, 90, 196, 0.2);
+    border: 2px solid var(--color-purple-500);
+    transform: scale(1.05);
+}
+#Register > .wrapper button{
+    width: 150px;
+    font-size: 1rem;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    background: var(--color-purple-400);
+    padding: 10px 7px;
+    color: #fff;
+    cursor: pointer;
+}
+#Register > .wrapper button.disabled{
+    background-color: var(--color-primary-300);
+    pointer-events: none;
+}
+#form-intro{
+    font-size: 3em;
+}
+.option > i{
+    width:10%;
+    align-self: center;
+    font-size: 1.3rem;
+    color: var(--color-purple-300);
+}
+
+.option > .text{
+    width:90%;
+    align-self: center;
+}
+
+.option > .text > {
+    margin: 0;
+}
+
+#Register > .wrapper >.form{
+    width: 60%;
+    background-color: var(--color-primary-500);
+    align-self: center;
+    display: none;
+}
+.form > h2{
+    margin: 10px 0px;
+}
+.form > form {
+    width: 100%;
+    background-color: var(--color-primary-500);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+#student-form, #mentor-form{
+    display: none;
+}
+form > label{
+    width: 45%;
+    position: relative;
+}
+
+form > label > input{
+    width: 100%;
+    height: 35px;
+    display: block;
+    margin: 5px 3px;
+    border-radius: 50px;
+    border: 1px solid var(--color-purple-400);
+    outline: none;
+    padding: 8px;
+}
+
+form > label > i{
+    position: absolute;
+    right: 5px;
+    bottom:35%;
+    transform:translate(0%, 50%);
+    color: var(--color-purple-500);
+    user-select: none;
+}
+
+.form button {
+    margin: 10px 0px; 
+}
+#Resume{
+    width: 90%;
+}
+@media  screen and (max-width:900px) {
+    #Register > .wrapper{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap:48px
+    }
+    .reg-option{
+        min-width: 100%;
+    }
+    .form{
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width:550px){
+
+    #Register > .wrapper > .reg-option > .description{
+        font-size: 13px;
+    }
+    .description{
+        min-width: 100%;
+    }
+
+    #form-intro{
+        font-size: 2em;
+    }
+    #Register > .wrapper > .reg-option > .option{
+        width: 70%;
+        font-size: 12px;
+    }
+}

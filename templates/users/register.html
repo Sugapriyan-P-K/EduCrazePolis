@@ -1,0 +1,189 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block user_base_head %} <link rel="stylesheet" href="{% static 'register.css' %}" />   {% endblock user_base_head %}
+<!-- {% block title %} Register Page {% endblock title%} -->
+{% block user_base_content %}
+<section id="Register">
+    <div class="wrapper">
+        <div class="reg-option">
+            <div class="description">
+            <h1>How do you want to use Educrazepolis?</h1>
+            <p>Registration details may change accordingly</p>
+            </div>
+            <div id="option-1" class="option">
+                <i class="fa-solid fa-code"></i>
+                <div class="text">
+                    <h3>I'm here to Learn</h3>
+                    <p>Enroll as a student</p>
+                </div>
+            </div>
+            <div id="option-2" class="option">
+                <i class="fa-solid fa-terminal"></i>
+                <div class="text">
+                    <h3>I'm here to Guide</h3>
+                    <p>Enroll as a mentor</p>
+                </div>
+            </div>
+            <button id="reg-btn" class="disabled">Start Register</button>
+        </div>
+        <div class="form">
+            <h2 id="form-intro"></h2>
+            <form method="POST" id="student-form">
+                {% csrf_token %}
+                    {% if form.errors %}
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <div id="form_errors">
+                                {% for key, value in form.errors.items %}
+                                    <strong>{{ value }}</strong>
+                                {% endfor %}
+                            </div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                    {% endif %}
+                <label for="first-name">First Name  
+                    {{ form.first_name }}
+                </label>
+                <label for="last-name">Last name
+                    {{ form.last_name }}
+                </label>
+                <label for="username">Username
+                    <!-- <input type="email" name="mail"/> -->
+                    {{ form.username }}
+                </label>
+                <label for="mail">Mail
+                    <!-- <input type="email" name="mail"/> -->
+                    {{ form.email }}
+                </label>
+                <label for="new-password"> Create new Password
+                    <!-- <input id="new-password1" type="password"/> -->
+                    <i id="pass-icon1" class="fa-solid fa-eye"></i>
+                    {{ form.password1 }}
+                    {{ form.errors.password }}
+                </label>
+                <label for="confirm-password"> Confirm Password
+                    <!-- <input id="confirm-password1" type="password"/> -->
+                    {{ form.password2 }}
+                    <i id="confirm-icon1" class="fa-solid fa-eye"></i>
+                </label>
+                <button id="submit" type="submit">Create account</button>
+            </form>
+            <form action="https://send.pageclip.co/cDL0XSaF5XDQtrpJ0ObKODBrnTRIqpz2/mentorsForm" class="pageclip-form" id="mentor-form" method="post">
+                <label for="first-name" class="form-label">First Name
+                    <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Kratos"  required/>
+                </label>
+                <label for="last-name" class="form-label">Last name
+                    <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Atreus" required/>
+                </label>
+                <label for="Phone" class="form-label">Mobile Number
+                    <input type="tel" name="Phone" id="Phone" class="form-control" placeholder="1234567890" required/>
+                </label>
+                <label for="mail" class="form-label">Mail
+                    <input type="email" name="mail" id="mail" class="form-control" placeholder="name@example.com" required/>
+                </label>
+                <label for="domains" class="form-label">Domains of Interest
+                    <input type="text" name="domains" id="domains" class="form-control" placeholder="Martial Arts" required/>
+                </label>
+                <label for="resume" id="Resume" class="form-label">Resume
+                    <input type="file" name="resume" accept=".pdf,.docx" id="resume" class="form-control" placeholder="resume.pdf" required/>
+                </label>
+                <label for="new-password" class="form-label"> Create new Password
+                    <input name="new-password2" id="new-password2" type="password" class="form-control" value="" placeholder="password" required/>
+                    <i id="pass-icon2" class="fa-solid fa-eye"></i>
+                </label>
+                <label for="confirm-password" class="form-label"> Confirm Password
+                    <input name="confirm-password2" id="confirm-password2" type="password" class="form-control" value="" placeholder="confirm-password" required/>
+                    <i id="confirm-icon2" class="fa-solid fa-eye"></i>
+                </label>
+                <button id="submit" type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<script>
+    let opt1 = document.querySelector('#option-1');
+    let opt2 = document.querySelector('#option-2');
+    let regbtn = document.querySelector('#reg-btn');
+    let formClass = document.querySelector('.form');
+    let formText = document.querySelector('#form-intro');
+    let submitBtn = document.querySelector('#submit-btn');
+    let studentForm = document.querySelector('#student-form');
+    let mentorForm =document.querySelector('#mentor-form');
+    let passIcon1 = document.querySelector('#pass-icon1');
+    let confirmIcon1 = document.querySelector('#confirm-icon1');
+    let newPass1 = document.querySelector('#new-password1');
+    let confirmPass1 = document.querySelector('#confirm-password1')
+    let passIcon2 = document.querySelector('#pass-icon2');
+    let confirmIcon2 = document.querySelector('#confirm-icon2');
+    let newPass2 = document.querySelector('#new-password2');
+    let confirmPass2 = document.querySelector('#confirm-password2')
+    passIcon1.addEventListener('click', ()=>{
+        eyeIcon(passIcon1);
+        passswordShower(newPass1);
+    });
+
+    confirmIcon1.addEventListener('click', ()=>{
+        eyeIcon(confirmIcon1);
+        passswordShower(confirmPass1);
+    });
+
+    passIcon2.addEventListener('click', ()=>{
+        eyeIcon(passIcon2);
+        passswordShower(newPass2);
+    });
+
+    confirmIcon2.addEventListener('click', ()=>{
+        eyeIcon(confirmIcon2);
+        passswordShower(confirmPass2);
+    });
+    
+    function passswordShower(x){
+        if(x.type === 'password')
+            x.type = 'text'
+        else
+            x.type = 'password'
+    }
+    function eyeIcon(iconObj){
+        iconObj.classList.toggle('fa-eye');
+        iconObj.classList.toggle('fa-eye-slash');    
+    }
+    opt1.addEventListener('click', ()=>{
+        if(opt2.classList.contains('selected'))
+            opt2.classList.toggle('selected')
+        opt1.classList.toggle('selected')
+        buttonCheck()
+    })
+    opt2.addEventListener('click', ()=>{
+        if(opt1.classList.contains('selected'))
+            opt1.classList.toggle('selected')
+        opt2.classList.toggle('selected')
+        buttonCheck()
+    })
+    function buttonCheck(){
+        if(opt1.classList.contains('selected')||opt2.classList.contains('selected')){
+            regbtn.classList.remove('disabled')
+        }else{
+            regbtn.classList.add('disabled')
+            formClass.style.display = 'none';
+        }
+    }
+
+    regbtn.addEventListener('click', ()=>{
+        let formChoice = opt1.classList.contains('selected')?studentForm:mentorForm;
+        if(formChoice === studentForm){
+            formText.textContent  ="Learner Registration";
+            mentorForm.style.display = 'none';
+            studentForm.style.display = 'flex';
+        }else{
+            formText.textContent  ="Mentor Registration"; 
+            studentForm.style.display = 'none';
+            mentorForm.style.display = 'flex';
+        }
+        formClass.style.display = 'block';
+    })
+    
+</script>
+{% endblock user_base_content %}

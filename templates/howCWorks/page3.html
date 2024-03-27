@@ -1,0 +1,5 @@
+{% extends "codes/code.html" %}
+{% block fetchCodeScript %}
+<button><a href="{% url 'start' number=4 subcategory=topic %}">next</a></button>
+<!-- <script src="js/codeScript.js" data-topic="c_assembly"></script> -->
+{% endblock %}

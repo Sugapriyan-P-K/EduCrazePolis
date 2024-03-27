@@ -10,7 +10,7 @@
         <script
             defer
             src="{% static 'js/quizScript.js' %}"
-            data-topic="{{ topic }}"
+            data-topic={{ topic }}
         ></script>
     </head>
     <body>
@@ -23,10 +23,10 @@
             <span class="indicator hidden"></span>
         </section>
         <button class="final-button btn-hidden">
-            <a href="{% url 'start' number=3 %}" class="page-link">next</a>
+            <a href="{% url 'start' number=3 subcategory=topic %}" class="page-link">next</a>
         </button>
         <button class="final-button go-back">
-            <a href="{% url 'start' number=1 %}" class="page-link">next</a>
+            <a href="{% url 'start' number=1 subcategory=topic %}" class="page-link">next</a>
         </button>
     </body>
 </html>

@@ -1,0 +1,18 @@
+{% extends "users/base.html" %}
+<!-- {% block title %} Home Page {% endblock title%} -->
+{% block user_base_content %}
+
+<section id="hero-section">
+    <div class="wrapper">
+        <div class="content">
+            <h1>Welcome, {{user.first_name.title|default:'Guest'}}</h1>
+            <p>Enjoy immensive learning experience from Educrazepolis</p>
+            <hr>
+            <p>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" role="button">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" role="button">Sign in</a></li>
+                {% endif %}
+            </p>
+{% endblock %}

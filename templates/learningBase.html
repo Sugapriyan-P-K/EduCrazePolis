@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'vendor/choices.js/public/assets/styles/choices.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+        {% block learningHeadContent %}
+        {% endblock %}
+    </head>
+    <!-- images, highlighted contents, if load little -> css animations else -> animations video  -->
+    <!-- next button at the end -->
+    <body>
+        <section class="py-5">
+            <div class="container py-4">
+              <header class="mb-5">
+                <h2 class="text-uppercase lined lined-center mb-4">Our clients </h2>
+              </header>
+            </div>
+        </section>
+        {% block learningContent %}
+        {% endblock %}
+        </body>
+        </html>
