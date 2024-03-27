@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'users.apps.UserConfig',
     'social_django',
     'corsheaders',
-    
+
     'homePage',
     'learnersCoreApp',
     'learnersCoreApp.learningGame',
