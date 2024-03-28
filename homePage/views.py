@@ -6,7 +6,7 @@ from users.forms import UpdateUserForm
 def home(request):
     try:
         user_form = UpdateUserForm(instance=request.user)
-    except Exception as e:
+    except Exception:
         user_form = None
     print(user_form)
     return render(request, "home.html", {'user_form' : user_form })
