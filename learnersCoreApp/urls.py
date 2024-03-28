@@ -11,15 +11,4 @@ urlpatterns = [
     re_path(r'^softwares/(?P<subcategory>(howCWorks|fundamentals|behindscenes|sorting))/', include("learnersCoreApp.learningGame.urls")),
     re_path(r'^roadmaps/(?P<subcategory>(frontendmap|backendmap|fullstackmap))/', include("learnersCoreApp.learningGame.urls")),
 ]
-
-
-    # path('hardwares/ipsubnet/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/hardwareBasics/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/cpu/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/gpu/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/ram/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/motherboard/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('hardwares/storageunit/', include("learnersCoreApp.ipsubnet.urls")),
-    # path('softwares/howCWorks/', include("learnersCoreApp.ipsubnet.urls")),
-    # re_path(r'^softwares/(?P<subcategory>(howCWorks|fundamentals|behindscenes|sorting))/', include("learnersCoreApp.ipsubnet.urls")),
     # re_path(r'^roadmaps/(?P<subcategory>(frontendmap|backendmap|fullstackmap))/', include("learnersCoreApp.ipsubnet.urls")),
