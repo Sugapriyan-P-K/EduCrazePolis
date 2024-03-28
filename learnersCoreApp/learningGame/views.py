@@ -14,7 +14,7 @@ def start(request, number, subcategory=None):
     print(path)
     if (number == 2):
         return render(request, "quiz/quiz.html", {"topic" : path})
-    htmlPage = fullPath[len(fullPath) - 3]  + str(number)
+    htmlPage = fullPath[len(fullPath) - 3] + str(number)
     print(htmlPage, "kjhgkjdfhgfdkjg jsjhkjghkgfdjhkfgdjhk ")
     try:
         return render(request, f"{path}/{htmlPage}.html", {"topic": path})
