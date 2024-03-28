@@ -13,7 +13,7 @@ def start(request, number, subcategory=None):
     print(fullPath)
     print(path)
     if (number == 2):
-        return render(request, "quiz/quiz.html",{"topic" : path})
+        return render(request, "quiz/quiz.html", {"topic" : path})
     htmlPage = fullPath[len(fullPath) - 3]  + str(number)
     print(htmlPage, "kjhgkjdfhgfdkjg jsjhkjghkgfdjhkfgdjhk ")
     try:
