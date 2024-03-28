@@ -8,5 +8,4 @@ def hardwares(request, category=None):
     print(request.get_full_path().split('/'))
     learnerDivision = request.get_full_path().split('/')[-2]
     print(learnerDivision)
-    # print(learnerDivision, 'sgsdgsdgs sdg sdg sd g sd gs dg sd g sdg s dg ')
     return render(request, f"allContent/index.html", { 'category' : learnerDivision })

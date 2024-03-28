@@ -11,4 +11,3 @@ urlpatterns = [
     re_path(r'^softwares/(?P<subcategory>(howCWorks|fundamentals|behindscenes|sorting))/', include("learnersCoreApp.learningGame.urls")),
     re_path(r'^roadmaps/(?P<subcategory>(frontendmap|backendmap|fullstackmap))/', include("learnersCoreApp.learningGame.urls")),
 ]
-    # re_path(r'^roadmaps/(?P<subcategory>(frontendmap|backendmap|fullstackmap))/', include("learnersCoreApp.ipsubnet.urls")),
